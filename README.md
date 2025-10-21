@@ -29,13 +29,8 @@ Each D flip-flop in the circuit has a Data (D) input, a Clock (CLK) input, and a
 
 **PROGRAM**
 
- module shiftregister ( input clk, // Clock input reset, // Asynchronous Reset input
- serial_in, // Serial Input output reg [3:0] q // 4-bit Output (shift register contents) );
- 
- always @(posedge clk or posedge reset) begin if (reset) q <= 4'b0000; // Reset clears
- the register else q <= {q[2:0], serial_in}; // Shift left and insert serial_in end
- 
- endmodule
+ <img width="801" height="220" alt="image" src="https://github.com/user-attachments/assets/329c603b-ee03-4693-8500-4cec162f5f9d" />
+
  
 /* Program for flipflops and verify its truth table in quartus using Verilog programming.
 
